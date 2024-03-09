@@ -6,13 +6,18 @@ using System.Threading.Tasks;
 
 namespace Task1.MoneyFolder
 {
-    public class MoneyUSD : Money
+    public class MoneyUAH : Money
     {
-        public MoneyUSD(int Bill, float Penny) : base(Bill, Penny) { }
-        
+        public MoneyUAH() { }
+
+        public MoneyUAH(int Bill, float Penny) : base(Bill, Penny)
+        {
+        }
+
         public override string show()
         {
-            return base.show() + "USD";
+            return base.show() + "UAH";
         }
+
     }
 }

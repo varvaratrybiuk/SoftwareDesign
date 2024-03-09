@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Task1.ReportingFolder
 {
-    internal class ProfitInvoice
+   public  interface  IProfitInvoice
     {
+        public void ProfitInvoice(Warehouse warehouse);
     }
 }

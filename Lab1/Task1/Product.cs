@@ -9,10 +9,12 @@ namespace Task1
 {
     public class Product
     {
-        public string Name { get; set; }
+        public string? Name { get; set; }
         public Money Price { get; set; }
-        public string Unit { get; set; }
-        public string Description { get; set; }
+        public string? Unit { get; set; }
+        public string? Description { get; set; }
+        public Product() { 
+        }
         public Product(string name, Money price, string unit, string description)
         {
             Name = name;
@@ -23,11 +25,11 @@ namespace Task1
 
         public void DecreasePrice(float amount)
         {
-            Price -= amount;
+            Price.Subtract(amount);
         }
         public void IncreasePrice(float amount)
         {
-            Price += amount;
+            Price.Add(amount);
         }
         
         public void UpdateProduct(string name, Money price, string unit, string description)
@@ -39,7 +41,7 @@ namespace Task1
         }
         public string GetProductInfo()
         {
-            return $"Назва: {Name}" + "\n" + $"Ціна: {Price}" + "\n" + $"Одиниця виміру: {Unit}" + "\n" + $"Опис: {Description}";
+            return $"Name: {Name}" + "\n" + $"Price: {Price.show()}" + "\n" + $"Unit: {Unit}" + "\n" + $"Description: {Description}";
     
         }
     }

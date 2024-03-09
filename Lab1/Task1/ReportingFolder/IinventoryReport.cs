@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Task1.ReportingFolder
 {
-    internal interface IinventoryReport
+    public interface IinventoryReport
     {
+        public void InventoryReport(Warehouse warehouse);
+       
     }
 }

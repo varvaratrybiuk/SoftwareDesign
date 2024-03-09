@@ -7,60 +7,59 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Task1.MoneyFolder
 {
-    public class Money
+    public abstract class Money
     {
         public int Bill { get; set; }
         public float Penny { get; set; }
 
-        public Money() { }
+
+       public Money() { }
         public Money(int Bill, float Penny) { 
             this.Bill = Bill;
             this.Penny = Penny;
         }
-        private float return_float()
+       public void set_amount(int Bill, float Penny)
         {
-            while (Penny > 1)
-            {
-                Penny /= 10;
-            }
-            return Bill + Penny;
+            this.Bill = Bill;
+            this.Penny = Penny;
         }
-        public float show()
+        public virtual string show()
         {
-            return return_float();
+            return $"{Bill}.{Penny}";
         }
-        public static Money operator +(Money money1, float value)
+        public virtual void  Add(float value)
         {
-            int totalBills = money1.Bill + (int)value;
-            float totalPennys = money1.Penny + (value - (int)value);
+            Bill = Bill + (int)value;
+            Penny = Penny + (value - (int)value);
 
-            if (totalPennys >= 1)
+            if (Penny >= 1)
             {
-                totalBills++;
-                totalPennys -= 1;
+                Bill++;
+                Penny -= 1;
             }
 
-            return new Money(totalBills, totalPennys);
+            
         }
 
-        public static Money operator -(Money money1, float value)
+        public virtual void Subtract(float value)
         {
-            int totalBills = money1.Bill - (int)value;
+            Bill -= (int)value;
 
-            if (totalBills < 0)
+            if (Bill < 0)
             {
-                return new Money(0, 0);
+                Bill = 0;
+                Penny = 0;
             }
 
-            float totalPennys = money1.Penny - (value - (int)value);
+            Penny = Penny - (value - (int)value);
 
-            if (totalPennys < 0)
+            if (Penny < 0)
             {
-                totalBills--;
-                totalPennys += 1;
+                Bill--;
+                Penny += 1;
             }
 
-            return new Money(totalBills, totalPennys);
+           
         }
 
     }
