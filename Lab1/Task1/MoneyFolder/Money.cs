@@ -27,7 +27,7 @@ namespace Task1.MoneyFolder
         {
             return $"{Bill}.{Penny}";
         }
-        public virtual void  Add(float value)
+        public void  Add(float value)
         {
             Bill = Bill + (int)value;
             Penny = Penny + (value - (int)value);
@@ -41,7 +41,7 @@ namespace Task1.MoneyFolder
             
         }
 
-        public virtual void Subtract(float value)
+        public void Subtract(float value)
         {
             Bill -= (int)value;
 

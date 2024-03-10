@@ -10,6 +10,7 @@ toysWarehouse.AddProduct(Barbie, 30, new DateTime(2024, 5, 12));
 toysWarehouse.AddProduct(Ken, 20, new DateTime(2024, 3, 17));
 toysWarehouse.GetProductInfo("Ken");
 toysWarehouse.SendProduct("Ken", 10);
+toysWarehouse.SendProduct("Ken", 20);
 toysWarehouse.Message -= ShowMessage;
 Reporting reporting = new Reporting();
 reporting.Message += ShowMessage;
@@ -19,7 +20,17 @@ reporting.ExpenseInvoice(toysWarehouse);
 reporting.Message -= ShowMessage;
 Console.WriteLine(Barbie.Price.show());
 Barbie.IncreasePrice(200);
+Ken.DecreasePrice(10);
+Console.WriteLine(Ken.Price.show());
+Ken.DecreasePrice(100);
+Console.WriteLine(Ken.Price.show());
 Console.WriteLine(Barbie.Price.show());
+toysWarehouse.RemoveProduct("Ken");
+reporting.Message += ShowMessage;
+reporting.InventoryReport(toysWarehouse);
+reporting.Message -= ShowMessage;
+
+
 static void ShowMessage(object sender, ShowMessageEvent e)
 {
     Console.WriteLine(e.Message);

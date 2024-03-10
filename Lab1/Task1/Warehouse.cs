@@ -72,7 +72,7 @@ namespace Task1
                     {
                         ProductDictionary[kvp.Key] = kvp.Value - amount;
                         
-                        ReportingList.ShippedGoods.Add(new ProductInfo(kvp.Key.product, DateTime.Now), kvp.Value);
+                        ReportingList.ShippedGoods.Add(new ProductInfo(kvp.Key.product, DateTime.Now), ProductDictionary[kvp.Key]);
                     }
                     if (kvp.Value < amount)
                     {
