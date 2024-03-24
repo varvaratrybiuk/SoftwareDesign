@@ -14,9 +14,9 @@ namespace FactoryMethod.Subscriptions
 
         public List<string> Channels { get; } = new List<string> { "Premium Movies", "Exclusive Shows", "Live Events" };
 
-        public string GetInfo()
+        public void GetInfo()
         {
-            throw new NotImplementedException();
+            Console.WriteLine($"About Premium:\n{MonthlyFee} USD\n {MinimumSubscriptionPeriod} month");       
         }
     }
 }

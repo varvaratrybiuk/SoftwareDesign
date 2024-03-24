@@ -7,11 +7,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FactoryMethod", "FactoryMet
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Abstract Factory", "Abstract Factory\Abstract Factory.csproj", "{0ABC81BD-78A7-4159-ABFB-EF9B6BE35601}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Singleton", "Singleton\Singleton.csproj", "{59B51584-410A-4AD6-99E2-2EBB8620D175}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Singleton", "Singleton\Singleton.csproj", "{59B51584-410A-4AD6-99E2-2EBB8620D175}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prototype", "Prototype\Prototype.csproj", "{E05EB80A-E262-4259-9D91-62A821388F6F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prototype", "Prototype\Prototype.csproj", "{E05EB80A-E262-4259-9D91-62A821388F6F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Builder", "Builder\Builder.csproj", "{5AF4063E-8FC1-4D73-B6B5-7AD56F4DA57A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Builder", "Builder\Builder.csproj", "{5AF4063E-8FC1-4D73-B6B5-7AD56F4DA57A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{FEDF6952-87D4-4ED5-AB99-98D02995D23D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{5AF4063E-8FC1-4D73-B6B5-7AD56F4DA57A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5AF4063E-8FC1-4D73-B6B5-7AD56F4DA57A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5AF4063E-8FC1-4D73-B6B5-7AD56F4DA57A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEDF6952-87D4-4ED5-AB99-98D02995D23D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEDF6952-87D4-4ED5-AB99-98D02995D23D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEDF6952-87D4-4ED5-AB99-98D02995D23D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEDF6952-87D4-4ED5-AB99-98D02995D23D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

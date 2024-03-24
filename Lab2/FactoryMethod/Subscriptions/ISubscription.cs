@@ -11,6 +11,6 @@ namespace FactoryMethod.Subscriptions
         double MonthlyFee { get; }
         int MinimumSubscriptionPeriod { get; }
         List<string> Channels { get; }
-        string GetInfo();
+        void GetInfo();
     }
 }

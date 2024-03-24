@@ -13,5 +13,10 @@ namespace FactoryMethod.Subscriptions
         public int MinimumSubscriptionPeriod { get; } = 1;
 
         public List<string> Channels { get;  } = new List<string> { "Local News", "Entertainment", "Sports" };
+
+        public void GetInfo()
+        {
+            Console.WriteLine($"About Domestic:\n{MonthlyFee} USD\n {MinimumSubscriptionPeriod} month");
+        }
     }
 }

@@ -17,7 +17,7 @@ namespace Abstract_Factory.Factories
 
         public INotebook CreateNotebook()
         {
-            return new GalaxyNotebook("13.1x8.2", "NVIDIA GeForce GTX 1650", true);
+            return new GalaxyNotebook("13.1x8.2", "Intel Core i9", true);
         }
 
         public ISmartphone CreateSmartphone()

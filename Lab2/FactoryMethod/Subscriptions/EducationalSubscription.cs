@@ -14,9 +14,9 @@ namespace FactoryMethod.Subscriptions
 
         public List<string> Channels { get; } = new List<string> { "Serials", "MusicChannel", "LearnLanguages"};
 
-        public string GetInfo()
+        public void GetInfo()
         {
-            
+            Console.WriteLine($"About Educational:\n{MonthlyFee} USD\n{MinimumSubscriptionPeriod} month");
         }
     }
 }

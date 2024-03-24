@@ -11,7 +11,7 @@ namespace FactoryMethod.Creators
     {
         public override ISubscription BuySubcription(string nameofsub)
         {
-            Console.WriteLine("Client buys subscription using WebSite:");
+            Console.WriteLine("Client buys subscription using website:");
             return ReturnSubscription(nameofsub);
         }
     }
