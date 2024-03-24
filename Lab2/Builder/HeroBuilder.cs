@@ -15,9 +15,9 @@
             return this;
         }
 
-        public IBuilder SetClothes(string clothes)
+        public IBuilder AddClothes(string clothes)
         {
-            _character.Clothes = clothes;
+            _character.Clothes.Add(clothes);
             return this;
         }
 

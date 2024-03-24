@@ -24,8 +24,8 @@ namespace Builder
         {
             return _builder.SetName("Tom")
                 .SetAppearance("Tall, muscular")
-                .SetClothes("Wizard Hat")
-                .SetClothes("Cloak")
+                .AddClothes("Wizard Hat")
+                .AddClothes("Cloak")
                 .AddToInventory("Magic Wand")
                 .AddToInventory("Spell Book")
                 .SetGood()
@@ -35,8 +35,8 @@ namespace Builder
         {
             return _builder.SetName("Tony")
                 .SetAppearance("Tall, muscular")
-                .SetClothes("Wizard Hat")
-                .SetClothes("Cloak")
+                .AddClothes("Black wizard Hat")
+                .AddClothes("Darck green cloak")
                 .AddToInventory("Magic Wand")
                 .AddToInventory("Spell Book")
                 .AddToInventory("Potion")

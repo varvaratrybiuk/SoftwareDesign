@@ -10,7 +10,7 @@ namespace Builder
     {
         public string? Name { get; set; }
         public string? Appearance { get; set; }
-        public string? Clothes { get; set; }
+        public List<string> Clothes { get; set; } = new List<string>();
         public List<string> Inventory { get; set; } = new List<string>();
         public bool? Good { get; set; }
         public List<string> Tasks { get; set; } = new List<string>();

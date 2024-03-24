@@ -10,7 +10,7 @@ namespace Builder
     {
         IBuilder SetName(string name);
         IBuilder SetAppearance(string appearance);
-        IBuilder SetClothes(string clothes);
+        IBuilder AddClothes(string clothes);
         IBuilder AddToInventory(string item);
         IBuilder SetGood();
         Character GetCharacter();
