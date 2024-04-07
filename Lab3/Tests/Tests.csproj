@@ -10,7 +10,9 @@
   <ItemGroup>
     <ProjectReference Include="..\Adapter\Adapter.csproj" />
     <ProjectReference Include="..\Bridge\Bridge.csproj" />
+    <ProjectReference Include="..\Composite\Composite.csproj" />
     <ProjectReference Include="..\Decorator\Decorator.csproj" />
+    <ProjectReference Include="..\Flyweight\Flyweight.csproj" />
     <ProjectReference Include="..\Proxy\Proxy.csproj" />
   </ItemGroup>
 
