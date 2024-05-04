@@ -1,4 +1,5 @@
-﻿using Composite;
+﻿using Command;
+using Composite;
 //Task 1
 var div1 = new LightElementNode("div", "block", "closed", new List<string>() { "div1" });
 var div2 = new LightElementNode("div", "block", "closed", new List<string>() { "div2" });
@@ -37,3 +38,13 @@ while (!breadsFirstIterator.IsDone())
     currentNode.outerHTML();
 
 }
+//Task 2
+var addtext1 = new AddTextInNode(div3, "Amy");
+var addtext2 = new AddTextInNode(div4, "Mary");
+var cssClass = new AddCssClass(div5, "some class");
+var invoker = new Invoker([addtext1, addtext2, cssClass]);
+invoker.ExecAllCommand();
+div1.innerHTML();
+invoker.UndoAllCommand();
+Console.WriteLine("-------------------------------------");
+div1.innerHTML();

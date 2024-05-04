@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tests", "Tests\Tests.csproj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Composite", "Composite\Composite.csproj", "{B0DE78CD-8390-4712-9063-9B93B63F5653}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Command", "Command\Command.csproj", "{C0721407-533D-428F-83B0-7F4BACF350F9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{B0DE78CD-8390-4712-9063-9B93B63F5653}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B0DE78CD-8390-4712-9063-9B93B63F5653}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B0DE78CD-8390-4712-9063-9B93B63F5653}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0721407-533D-428F-83B0-7F4BACF350F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0721407-533D-428F-83B0-7F4BACF350F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0721407-533D-428F-83B0-7F4BACF350F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0721407-533D-428F-83B0-7F4BACF350F9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
