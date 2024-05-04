@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Composite.Iterators;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,7 +8,7 @@ using System.Xml.Linq;
 
 namespace Composite
 {
-    public class LightElementNode : ILightNode
+    public class LightElementNode : ILightNode, IType
     {
         private List<ILightNode> _children = new List<ILightNode>();
         public string TagName { get; }
@@ -44,6 +45,19 @@ namespace Composite
             {
                 Console.WriteLine($"</{TagName}{(ClosingType == "closed" ? ">" : " />")}");
             }
+        }
+        public List<ILightNode> GetChildren()
+        {
+            return _children;
+        }
+        public IIterator GetDepthIterator()
+        {
+            return new DepthIterator(this);
+        }
+
+        public IIterator GetBreadIterator()
+        {
+            return new BreadthIterator(this);
         }
     }
 }
