@@ -48,3 +48,9 @@ div1.innerHTML();
 invoker.UndoAllCommand();
 Console.WriteLine("-------------------------------------");
 div1.innerHTML();
+//Task 3
+Console.WriteLine("-------------------------------------");
+div1.MouseOut();
+div1.MouseOver();
+div1.MouseOver();
+div1.MouseOut();
