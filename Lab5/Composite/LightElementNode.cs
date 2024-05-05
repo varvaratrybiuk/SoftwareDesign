@@ -1,5 +1,6 @@
 ﻿using Composite.Iterators;
 using Composite.State;
+using Composite.Template_Method;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ using System.Xml.Linq;
 
 namespace Composite
 {
-    public class LightElementNode : ILightNode, IType, INodeElementState
+    public class LightElementNode : LifecycleHooks, ILightNode, IType, INodeElementState
     {
         private List<ILightNode> _children = new List<ILightNode>();
         public string TagName { get; }
@@ -26,9 +27,11 @@ namespace Composite
             ClosingType = closingType;
             CssClasses = cssClasses;
             State = new UnselectedState(this);
+            CreateMethod();
         }
         public void AddChild(ILightNode node)
         {
+           
             _children.Add(node);
         }
         public void RemoveChild(ILightNode node) { 
@@ -36,8 +39,12 @@ namespace Composite
         }
         public void innerHTML()
         {
-            foreach (var node in _children) 
+            foreach (var node in _children) {
                 node.outerHTML();
+                if (node is LightTextNode)
+                    TextMethod();
+            }
+               
         }
 
         public void outerHTML()
@@ -48,6 +55,7 @@ namespace Composite
             {
                 Console.WriteLine($"</{TagName}{(ClosingType == "closed" ? ">" : " />")}");
             }
+          
         }
         public List<ILightNode> GetChildren()
         {
@@ -67,5 +75,20 @@ namespace Composite
         public void MouseOver() => State.MouseOver();
 
         public void MouseOut() => State.MouseOut();
+
+        public override void OnCreate()
+        {
+            Console.WriteLine("Node was created");
+        }
+
+        public override void OnInserted()
+        {
+            Console.WriteLine("Node was inserted");
+        }
+         public override void OnTextRendered()
+        {
+            Console.WriteLine($"Text  was rendered");
+        }
+      
     }
 }
