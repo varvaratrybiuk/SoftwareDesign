@@ -1,4 +1,5 @@
 ﻿using Composite.Template_Method;
+using Composite.Visitor;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,10 @@ namespace Composite
             this.text = text;
         
         }
+        public void UpdateText(string text)
+        {
+            this.text += text;
+        } 
         public void innerHTML()
         {
             Console.WriteLine(text);
@@ -24,6 +29,11 @@ namespace Composite
         public void outerHTML()
         {
             Console.WriteLine(text);
+        }
+
+        public void Accept(IVisitor visitor)
+        {
+            visitor.Visit(this);
         }
     }
 }
