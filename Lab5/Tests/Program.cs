@@ -1,5 +1,6 @@
 ﻿using Command;
 using Composite;
+using Composite.Visitor;
 //Task 1
 var div1 = new LightElementNode("div", "block", "closed", new List<string>() { "div1" });
 var div2 = new LightElementNode("div", "block", "closed", new List<string>() { "div2" });
@@ -54,3 +55,8 @@ div1.MouseOut();
 div1.MouseOver();
 div1.MouseOver();
 div1.MouseOut();
+//Task 5
+Console.WriteLine("-------------------------------------");
+div3.Accept(new UpdateClassListAndText());
+textindiv7.Accept(new UpdateClassListAndText());
+div3.outerHTML();

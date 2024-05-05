@@ -1,6 +1,7 @@
 ﻿using Composite.Iterators;
 using Composite.State;
 using Composite.Template_Method;
+using Composite.Visitor;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,8 +19,11 @@ namespace Composite
         public string ClosingType { get; }
         public List<string> CssClasses { get; }
         public INodeElementState State { get; private set; }
-       
 
+        public void Accept(IVisitor visitor)
+        {
+            visitor.Visit(this);
+        }
         public LightElementNode(string tagName, string displayType, string closingType, List<string> cssClasses)
         {
             TagName = tagName;
